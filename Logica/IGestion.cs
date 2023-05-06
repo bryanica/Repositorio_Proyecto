@@ -11,7 +11,7 @@ namespace Logica
         bool Add(T Persona);
         bool Delete(T Persona);
         bool Exist(T Persona);
-        String Update(T Persona);
+        bool Update(T Persona);
         List<T> GetAll();
         List<T> GetByName(string name);
         List<T> GetByID(int Numer);

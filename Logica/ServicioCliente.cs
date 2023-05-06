@@ -33,8 +33,12 @@ namespace Logica
 
         public bool Delete(Cliente Persona)
         {
-            clientes.Remove(Persona);
-            return true;
+            try
+            {
+                clientes.Remove(Persona);
+                return true;
+            }
+            catch(Exception) { return false; }
         }
 
         public bool Exist(Cliente Persona)
@@ -91,9 +95,19 @@ namespace Logica
             }
         }
 
-        public string Update(Cliente Persona)
+        public bool Update(Cliente Persona)
         {
-            throw new NotImplementedException();
+            foreach (var item in clientes)
+            {
+                if (item.Id == Persona.Id)
+                {
+                    item.Email = Persona.Email;
+                    item.Direccion = Persona.Direccion;
+                    item.Nombre = Persona.Nombre;
+                }
+            }
+            var msn = repositorio.UpdateContacto(clientes);
+            return msn;
         }
     }
 }
