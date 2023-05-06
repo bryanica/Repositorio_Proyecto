@@ -183,5 +183,15 @@
   <ItemGroup>
     <None Include="Resources\cargar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{3a09f91e-295f-4eba-984d-9fcb2034a956}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{c1f3b567-02db-4d81-8e1e-eb3f0a7574c7}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

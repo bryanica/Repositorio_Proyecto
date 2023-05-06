@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Usuario: Persona
+    public class Usuario: Persona
     {
         public Usuario() { }
 
